@@ -8,16 +8,30 @@
 return array(
 	'basePath' => dirname(__FILE__).DIRECTORY_SEPARATOR.'..',
 	'name' => 'Places Nearby',
-	'import' => array(
+
+	// autoloading model and component classes
+	'import'=>array(
 		'application.models.*',
+		'application.components.*',
 	),
+
+	'modules'=>array(
+		// uncomment the following to enable the Gii tool
+		'gii'=>array(
+			'class'=>'system.gii.GiiModule',
+			'password'=>'123',
+			// If removed, Gii defaults to localhost only. Edit carefully to taste.
+			'ipFilters'=>array('127.0.0.1','::1'),
+		),
+	),
+
 	'components' => array(
 		'db' => array(
 			'connectionString' => 'sqlite:'.dirname(__FILE__).'/../data/locations.db',
 		),
 		'urlManager' => array(
 			'urlFormat' => 'path',
-			'showScriptName' => false,
+			'showScriptName' => true,
 			'rules' => array(
 				'<controller:\w+>/<id:\d+>'=>'<controller>/view',
 				'<controller:\w+>/<action:\w+>/<id:\d+>'=>'<controller>/<action>',
