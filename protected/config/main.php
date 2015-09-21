@@ -38,5 +38,11 @@ return array(
 				'<controller:\w+>/<action:\w+>'=>'<controller>/<action>',
 			),
 		)
+	),
+
+	'params' => array(
+		'PlacesApi' => array(
+			'apiKey' => 'AIzaSyBeoZNRfMkI9cja35eTCQTQr9GzG_yYA_o'
+		)
 	)
 );
