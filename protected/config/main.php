@@ -42,7 +42,7 @@ return array(
 
 	'params' => array(
 		'PlacesApi' => array(
-			'apiKey' => 'AIzaSyBeoZNRfMkI9cja35eTCQTQr9GzG_yYA_o'
+			'apiKey' => 'AIzaSyDABnRserK39LrfpCdaBB2aioN6LR-edsQ'
 		)
 	)
 );
