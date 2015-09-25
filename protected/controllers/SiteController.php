@@ -18,6 +18,7 @@ class SiteController extends CController
 	private function getPlaces(&$location)
 	{
 		$hash = md5($location->lat . '-' . $location->long);
+
 		$cache = Yii::app()->cache->get($hash);
 		if ($cache === false)
 		{
